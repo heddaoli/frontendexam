@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Anna Karin Olimb",
+    "age": "53",
+    "city": "Jevnaker",
+    "relation": "Family member"
+  },
+  {
+    "name": "Per Olimb",
+    "age": "54",
+    "city": "Jevnaker",
+    "relation": "Family member"
+  },
+  {
+    "name": "Lene Engh Olimb",
+    "age": "26",
+    "city": "Jevnaker",
+    "relation": "Family member"
+  },
+  {
+    "name": "Anders Fegri",
+    "age": "27",
+    "city": "Jevnaker",
+    "relation": "Family member"
+  },
+  {
+    "name": "Hanne Olimb",
+    "age": "62",
+    "city": "Jevnaker",
+    "relation": "Family member"
+  },
+  {
+    "name": "Ida Joakimsen Bakken",
+    "age": "24",
+    "city": "Råholt",
+    "relation": "Friend"
+  },
+  {
+    "name": "Jonas Lillebø Haugen",
+    "age": "22",
+    "city": "Nordre Follo",
+    "relation": "Friend"
+  },
+  {
+    "name": "Richard Langtinn",
+    "age": "26",
+    "city": "Trondheim",
+    "relation": "Friend"
+  },
+  {
+    "name": "Grete Ege",
+    "age": "23",
+    "city": "Stavanger",
+    "relation": "Friend"
+  },
+  {
+    "name": "Elsa Lossius",
+    "age": "22",
+    "city": "Jevnaker",
+    "relation": "Friend"
+  },
+  {
+    "name": "Kari Ruud",
+    "age": "22",
+    "city": "Jevnaker",
+    "relation": "Friend"
+  },
+  {
+    "name": "Elisabeth Alderberg",
+    "age": "70",
+    "city": "Sweden",
+    "relation": "Family member"
+  },
+  {
+    "name": "Oliver Engh Olimb",
+    "age": "4",
+    "city": "Jevnaker",
+    "relation": "Family member"
+  },
+  {
+    "name": "Trine Lise Olimb",
+    "age": "38",
+    "city": "Jevnaker",
+    "relation": "Family member"
+  },
+  {
+    "name": "Karoline Thaulow",
+    "age": "22",
+    "city": "Brandbu",
+    "relation": "Friend"
+  },
+  {
+    "name": "Hanna Jacobsen",
+    "age": "25",
+    "city": "Jessheim",
+    "relation": "Friend"
+  },
+  {
+    "name": "Ragnhild Støa",
+    "age": "22",
+    "city": "Jevnaker",
+    "relation": "Friend"
+  },
+  {
+    "name": "Oda Lehre",
+    "age": "22",
+    "city": "Brandbu",
+    "relation": "Friend"
+  },
+  {
+    "name": "Iver Jaavold",
+    "age": "22",
+    "city": "Bærum",
+    "relation": "Friend"
+  },
+  {
+    "name": "Martine Heggen",
+    "age": "22",
+    "city": "Gran",
+    "relation": "Friend"
+  }
+]

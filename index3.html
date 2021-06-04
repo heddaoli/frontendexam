@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>Contact</h1>
+    <div class="bar">
+      <a class="button" href="index.html">HOMEPAGE</a>
+      <a class="button" href="lists.json">LISTS</a>
+      <a class="button" href="index2.html">QUIZ</a>
+      <a class="button" href="index3.html">CONTACT</a>
+    </div>
+
+    Your Name
+    <form
+      name="Login"
+      method="post"
+      action="#"
+      onsubmit="return validateForm()"
+    >
+      <input type="text" name="fName" id="FN" /> <br />
+
+      Age <br />
+      <input type="text" name="ageField" id="age" /> <br />
+
+      Email <br />
+      <input type="text" name="email" id="e" /><br />
+
+      Number <br />
+      <input type="text" name="number" id="num" />
+
+      <input
+        type="submit"
+        name="sub"
+        value="Submit"
+        onclick="updateContact()"
+      />
+    </form>
+
+    <script type="text/javascript">
+      document.querySelector("h1").innerHTML = "Contact";
+      document.querySelector("input[type=submit]").value = "Update";
+
+      class Contact {
+        setContact(name, age, email, numb) {
+          this.name = name;
+          this.age = age;
+          this.email = email;
+          this.numb = numb;
+        }
+        getContact() {
+          document.forms["Login"]["fName"].value = localStorage.getItem("name");
+          document.forms["Login"]["ageField"].value =
+            localStorage.getItem("age");
+          document.forms["Login"]["email"].value =
+            localStorage.getItem("email");
+          document.forms["Login"]["number"].value =
+            localStorage.getItem("number");
+        }
+
+        saveContact() {
+          localStorage.setItem("name", this.name);
+          localStorage.setItem("age", this.age);
+          localStorage.setItem("email", this.email);
+          localStorage.setItem("number", this.numb);
+        }
+      }
+
+      function validateForm() {
+        var x = document.forms["Login"]["fName"].value;
+
+        if (x == null || x == "") {
+          alert("Please enter your name");
+          document.getElementById("FN").focus();
+          return false;
+        } else if (x.length < 3) {
+          alert("Name must have more than 3 letters.");
+          document.getElementById("FN").focus();
+          return false;
+        }
+
+        var a = document.forms["Login"]["ageField"].value;
+        if (a == null || a == "") {
+          alert("Age field can not be empty");
+          document.getElementById("age").focus();
+          return false;
+        } else if (parseInt(a) < 12 || parseInt(a) > 95) {
+          alert("Age should be between 12 and 95");
+          return false;
+        }
+
+        var num = document.forms["Login"]["number"].value;
+        var stripped = num.replace(/[\(\)\.\-\ ]/g, "");
+        if (num == "") {
+          alert("You did not enter a number!");
+          return false;
+        } else if (isNaN(parseInt(stripped))) {
+          alert("Phone Number can only contain numbers!");
+          return false;
+        } else if (!(stripped.length == 7)) {
+          alert("Phone Number contains wrong amount of numbers!");
+          return false;
+        }
+
+        var em = document.forms["Login"]["email"].value;
+        var atpos = em.indexOf("@ntnu");
+        var dotpos = em.lastIndexOf(".no");
+        if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= em.length) {
+          alert("Not a valid e-mail address");
+          return false;
+        } else {
+          myContact.setContact(x, a, em, stripped);
+          myContact.saveContact();
+          return true;
+        }
+      }
+
+      var myContact = new Contact();
+
+      function updateContact() {
+        if (validateForm()) {
+          myContact.setContact();
+        } else {
+          alert("Failed to update Contact");
+        }
+      }
+
+      function displayContact() {
+        if (localStorage != null) {
+          myContact.getContact();
+        } else {
+          console.log("Nothing in storage :(");
+        }
+      }
+      window.onload = function () {
+        displayContact();
+      };
+    </script>
+  </body>
+</html>
