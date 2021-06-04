@@ -8,7 +8,7 @@ fetch("lists.json")
       .addEventListener("click", function () {
         ul.innerHTML = "";
         data
-          .filter((data) => data.forkortelse === "Friend")
+          .filter((data) => data.relation === "Friend")
           .forEach((element) => {
             let li = document.createElement("li");
             li.innerHTML = `
@@ -19,11 +19,11 @@ fetch("lists.json")
           });
       });
     document
-      .querySelector("input#Family member")
+      .querySelector("input#Family")
       .addEventListener("click", function () {
         ul.innerHTML = "";
         data
-          .filter((data) => data.forkortelse === "Familymember")
+          .filter((data) => data.relation === "Family")
           .forEach((element) => {
             let li = document.createElement("li");
             li.innerHTML = `
