@@ -1,4 +1,4 @@
-let ul = document.querySelector(".friendsandfamily");
+let ul = document.querySelector(".Friendsandfamily");
 
 fetch("lists.json")
   .then((response) => response.json())
@@ -12,8 +12,10 @@ fetch("lists.json")
           .forEach((element) => {
             let li = document.createElement("li");
             li.innerHTML = `
-            <p class='name'>${element.name} ${element.age}</p>
-            <p class='studyprogram'> ${element.city} ${element.relation} </p>
+            <p class='name'>${element.name}</p>
+            <p class='age'>${element.age}</p>
+            <p class='city'>${element.city}</p>
+    
             `;
             ul.appendChild(li);
           });
@@ -27,8 +29,10 @@ fetch("lists.json")
           .forEach((element) => {
             let li = document.createElement("li");
             li.innerHTML = `
-            <p class='name'>${element.fornavn} ${element.etternavn}</p>
-            <p class='studyprogram'> ${element.studieprogram} </p>
+            <p class='name'>${element.name}</p>
+            <p class='age'>${element.age}</p>
+            <p class='city'>${element.city}</p>
+    
             `;
             ul.appendChild(li);
           });
@@ -39,8 +43,10 @@ fetch("lists.json")
       data.forEach((element) => {
         let li = document.createElement("li");
         li.innerHTML = `
-            <p class='name'>${element.fornavn} ${element.etternavn}</p>
-            <p class='studyprogram'> ${element.studieprogram} </p>
+        <p class='name'>${element.name}</p>
+        <p class='age'>${element.age}</p>
+        <p class='city'>${element.city}</p>
+
             `;
         ul.appendChild(li);
       });
