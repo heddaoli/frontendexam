@@ -4,7 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script defer src="script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="bar">
+      <a class="button" href="index.html">HOMEPAGE</a>
+      <a class="button" href="index1.html">LISTS</a>
+      <a class="button" href="index2.html">QUIZ</a>
+      <a class="button" href="index3.html">CONTACT</a>
+    </div>
+  </body>
+
+  <div id="container">
+    <header>
+      <h1>Quiz</h1>
+    </header>
+    <section>
+      <div id="results"></div>
+      <form name="quizForm" onsubmit="return submitAnswers()">
+        <h3>1. What is the highest mountain in the world?</h3>
+        <input type="radio" name="q1" value="a" id="q1a" />a. &lt;Mount
+        Everest&gt;<br />
+        <input type="radio" name="q1" value="b" id="q1b" />b.
+        &lt;Galdhøpiggen&gt;<br />
+        <input type="radio" name="q1" value="c" id="q1c" />c. &lt;K2&gt;<br />
+        <input type="radio" name="q1" value="d" id="q1d" />d. &lt;Makalu&gt;<br />
+
+        <br /><br />
+        <h3>2. How many people in the world?</h3>
+        <input type="radio" name="q2" value="a" id="q2a" />a. 2 billion<br />
+        <input type="radio" name="q2" value="b" id="q2b" />b. 3 million<br />
+        <input type="radio" name="q2" value="c" id="q2c" />c. 7 billion<br />
+        <input type="radio" name="q2" value="d" id="q2d" />d. 400 million<br />
+
+        <br /><br />
+        <h3>3. JavaScript is a version of Java.</h3>
+        <input type="radio" name="q3" value="a" id="q3a" />a. true<br />
+        <input type="radio" name="q3" value="b" id="q3b" />b. false<br />
+
+        <br /><br />
+        <input type="submit" value="Submit Answers" />
+      </form>
+    </section>
+  </div>
 </html>
